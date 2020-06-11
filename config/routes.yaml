@@ -1,0 +1,20 @@
+home:
+    path: /
+    controller: App\Controller\HomeController::index
+
+property.index:
+    path: /biens
+    controller: App\Controller\PropertyController::index
+
+property.show:
+    path: /biens/{slug}-{id}
+    controller: App\Controller\PropertyController::show
+    requirements:
+        slug: '[a-z0-9\-]*'
+
+
+
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
