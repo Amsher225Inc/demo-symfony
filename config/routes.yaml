@@ -12,7 +12,9 @@ property.show:
     requirements:
         slug: '[a-z0-9\-]*'
 
-
+# route pour se logout
+logout:
+    path: /logout
 
 #index:
 #    path: /

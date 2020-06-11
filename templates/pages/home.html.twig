@@ -14,7 +14,7 @@
                 <div class="col-3">
                     <div class="card">
                         <div class="card-body">
-                            <h2 class="card-title"><a href="{{ path('property.show', {'slug': property.slug, 'id': property.id}) }}">{{ property.title }}</a></h2>
+                            <h4 class="card-title"><a href="{{ path('property.show', {'slug': property.slug, 'id': property.id}) }}">{{ property.title }}</a></h4>
                             <p>{{ property.city }} ({{ property.adresse }})</p>
                             <div class="text-primary">{{ property.price | number_format(0, '', ' ') }} FCA</div>
                         </div>
