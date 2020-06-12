@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Gestion des options' %}
+
+{% block body %}
+    <div class="container mt-4">
+        <h1>Gestion des options</h1>
+        <div class="text-right mb-4">
+            <a class="btn btn-primary" href="{{ path('option_create') }}">Créer une nouvelle option</a>
+        </div>
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for option in options %}
+                <tr>
+                    <td>{{ option.id }}</td>
+                    <td>{{ option.name }}</td>
+                    <td>
+                        <a href="{{ path('option_edit', {'id': option.id}) }}" class="btn btn-secondary">Editer</a>
+                        <form method="post" action="{{ path('option_delete', {'id': option.id}) }}" style="display: inline-block;"
+                              onsubmit="return confirm('Voulez-vous vraiment supprimer cette option ?');">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ option.id) }}">
+                            <button class="btn btn-danger">Supprimer</button>
+                        </form>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="3">Auccune option trouvée.</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

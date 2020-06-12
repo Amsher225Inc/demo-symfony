@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Option{% endblock %}
+
+{% block body %}
+
+    <div class="container mt-4">
+
+        <h1>Edit une option</h1>
+
+        {{ include('admin/option/_form.html.twig', {form: form, 'button_label': 'Editer'}) }}
+
+        <a href="{{ path('option_index') }}">Retour</a>
+    </div>
+
+{% endblock %}
+
+
+
