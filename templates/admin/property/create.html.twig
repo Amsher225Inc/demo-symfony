@@ -7,14 +7,3 @@
         {{ include ('admin/property/_form.html.twig' , {form: form, button: 'Sauvegarder'} ) }}
     </div>
 {% endblock %}
-
-{% block stylesheets %}
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-css/1.4.6/select2-bootstrap.css" rel="stylesheet" />
-{% endblock %}
-
-{% block javascripts %}
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/i18n/fr.min.js"></script>
-    <script type="text/javascript">
-        $("select").select2()
-    </script>
-{% endblock %}

@@ -100,12 +100,18 @@ class Property
     private $created_at;
 
     /**
+     * @ORM\Column(type="datetime")
+     */
+    private $updated_at;
+
+    /**
      * @ORM\ManyToMany(targetEntity=Option::class, inversedBy="properties")
      */
     private $options;
 
     public function __construct()
     {
+        $this->updated_at = new \DateTime();
         $this->created_at = new \DateTime();
         $this->options = new ArrayCollection();
     }
@@ -285,6 +291,26 @@ class Property
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updated_at;
+    }
+
+    /**
+     * @param mixed $updated_at
+     * @return Property
+     */
+    public function setUpdatedAt($updated_at)
+    {
+        $this->updated_at = $updated_at;
+        return $this;
+    }
+
+
 
     /**
      * @return Collection|Option[]

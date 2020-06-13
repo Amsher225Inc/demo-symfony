@@ -15,6 +15,7 @@
         <table class="table table-striped">
             <thead>
             <tr>
+                <th>#</th>
                 <th>Titre</th>
                 <th>Actions</th>
             </tr>
@@ -22,6 +23,7 @@
             <tbody>
             {% for property in properties %}
                 <tr>
+                    <td>{{ property.id }}</td>
                     <td>{{ property.title }}</td>
                     <td>
                         <a class="btn btn-secondary" href="{{ path('admin.property.edit', {'id': property.id}) }}">Editer</a>
