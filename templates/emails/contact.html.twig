@@ -1,0 +1,24 @@
+<table width="100" cellspacing="0" >
+    <tr>
+        <td>Bien concerné</td>
+        <td><a href="{{ url('property.show', {'id': contact.property.id, 'slug': contact.property.slug}) }}">{{ contact.property.title }}</a></td>
+    </tr>
+    <tr>
+        <td>Nom du client</td>
+        <td>{{ contact.lastname }}</td>
+    </tr>
+    <tr>
+        <td>Prénoms</td>
+        <td>{{ contact.firstname }}</td>
+    </tr>    <tr>
+        <td>Email</td>
+        <td>{{ contact.email }}</td>
+    </tr>    <tr>
+        <td>Téléphone</td>
+        <td>{{ contact.phone }}</td>
+    </tr>
+    <tr>
+        <td>Message</td>
+        <td>{{ contact.message | nl2br }}</td>
+    </tr>
+</table>

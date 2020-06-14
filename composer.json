@@ -7,6 +7,7 @@
         "ext-iconv": "*",
         "cocur/slugify": "^4.0",
         "knplabs/knp-paginator-bundle": "^5.2",
+        "liip/imagine-bundle": "^2.3",
         "sensio/framework-extra-bundle": "^5.5",
         "symfony/asset": "5.1.*",
         "symfony/console": "5.1.*",
@@ -30,7 +31,8 @@
         "symfony/twig-pack": "*",
         "symfony/validator": "5.1.*",
         "symfony/web-link": "5.1.*",
-        "symfony/yaml": "5.1.*"
+        "symfony/yaml": "5.1.*",
+        "vich/uploader-bundle": "^1.13"
     },
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "^3.3",

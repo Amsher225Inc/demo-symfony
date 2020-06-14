@@ -1,4 +1,5 @@
 <div class="card mb-4">
+    <img src="{{ asset('/images/properties/default.jpeg') }}" alt="{{ property.slug }}" class="card-img-top" style="width: 100%; height: auto;">
     <div class="card-body">
         <h5 class="card-title">
             <a href="{{ path('property.show', {'slug': property.slug, 'id':property.id}) }}">{{ property.title }}</a>
